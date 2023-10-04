@@ -19,10 +19,12 @@ class View:
         line: str = ""
 
         for i in range(board_len):
-            print(line)
             line = ""
+
             for j in range(board_len):
                 if self.board[i][j].description is not None:
                     line += str(self.board[i][j].description) + "  "
                 else:
                     line += "?  "
+
+            print(line)

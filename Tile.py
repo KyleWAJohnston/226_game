@@ -1,4 +1,5 @@
 import Treasure
+import Player
 
 
 class Tile:
@@ -15,3 +16,8 @@ class Tile:
         else:
             self.description: chr = desc
             self.instance = instance
+
+        self.player = None
+
+    def add_player(self, player: Player):
+        self.player = player
