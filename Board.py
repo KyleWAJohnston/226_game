@@ -55,42 +55,51 @@ class Board:
             print("Error: Maximum amount of players has already been reached for this board size.")
 
     def move_player(self, name, direction):
+        """
+        Moves the players position on the board according to the given input.
+        :param name: The player being moved.
+        :param direction: The direction the player is being moved.
+        """
         if name not in self.players:
             raise ValueError("Error: No player by that name.")
 
-        print(self.players[name])
         current_player, (current_x, current_y) = self.players[name]
 
         new_x: int = 0
         new_y: int = 0
         was_pos_updated: bool = True
 
-        match direction:
-            case "U":
+        match direction.upper():
+            case "U" | "UP":
                 if current_x == 0:
-                    raise ValueError("Player cannot go up.")
+                    raise ValueError("Player.py cannot go up.")
                 else:
                     new_x = current_x - 1
-            case "D":
+                    new_y = current_y
+            case "D" | "DOWN":
                 if current_x == self.n - 1:
-                    raise ValueError("Player cannot go down.")
+                    raise ValueError("Player.py cannot go down.")
                 else:
                     new_x = current_x + 1
-            case "L":
+                    new_y = current_y
+            case "L" | "LEFT":
                 if current_y == 0:
-                    raise ValueError("Player cannot go left.")
+                    raise ValueError("Player.py cannot go left.")
                 else:
                     new_y = current_y - 1
-            case "R":
+                    new_x = current_x
+            case "R" | "RIGHT":
                 if current_y == self.n - 1:
-                    raise ValueError("Player cannot go right.")
+                    raise ValueError("Player.py cannot go right.")
                 else:
                     new_y = current_y + 1
+                    new_x = current_x
             case other:
-                raise ValueError("Error: Invalid input. Only enter either U, L, R, D, or Q.")
+                raise ValueError("Invalid input. Only enter either U, L, R, D, or Q.")
                 was_pos_updated = False
 
         if was_pos_updated:
-            self.players[name] = (current_player, (new_x, new_y))
+            new_position = (current_player, (new_x, new_y))
+            self.players[name] = new_position
             self.board[current_x][current_y] = self.default
             self.board[new_x][new_y] = self.player_tiles[current_player.name]
