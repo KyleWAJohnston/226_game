@@ -12,7 +12,7 @@ class Tile:
         """
         if instance is not None:
             self.description: chr = instance.description
-            self.instance: Treasure = instance
+            self.instance = instance
         else:
             self.description: chr = desc
             self.instance = instance
@@ -20,4 +20,8 @@ class Tile:
         self.player = None
 
     def add_player(self, player: Player):
+        """
+        Adds a player to the tile instance.
+        :param player: The player that owns the tile.
+        """
         self.player = player

@@ -30,14 +30,21 @@ turn: int = 0
 while is_game_over is False:
     # Automatically tracks which players turn it is.
     turn += 1
-    current_player = ((turn - 1) % player_count) + 1
+    current_player_name = ((turn - 1) % player_count) + 1
+
+    # Find out if the game is over.
+    if newBoard.treasure_tile_amount == 0:
+        isGameOver = True
+        break
+
+    (current_player, (x, y)) = newBoard.players[current_player_name]
 
     # Draw the updated board again after every move.
     newView.display_board()
 
     # Print the current player whose turn it is, and the available move options.
-    print(f"Player: ", current_player)
+    print(f"Player: ", current_player_name, " Score: ", current_player.score)
     user_move = input("(U)p (L)eft (R)ight (D)own (Q)uit? ")
 
     # Takes the players move choice and updates the board.
-    newBoard.move_player(current_player, str(user_move))
+    newBoard.move_player(current_player_name, str(user_move))

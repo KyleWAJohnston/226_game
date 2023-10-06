@@ -18,10 +18,13 @@ class Board:
         self.players: Player = {}
         self.n = n
         self.player_count: int = 0
+        self.treasure_tile_amount = 0
+
+        # Treasure instances
+        self.treasures = {}
 
         # Tile instances
         self.default: Tile = Tile.Tile()
-        treasure_tile1: Tile = Tile.Tile(t.description, t)
         self.player_tiles: Tile = {}
 
         # Create the 2d board filled with default Tiles.
@@ -30,12 +33,17 @@ class Board:
         # Create a tuple of empty spaces.
         self.empty_spaces = [(x, y) for x in range(n) for y in range(n)]
 
-        # count: int = 0
+        treasure_tile: Treasure = Tile.Tile()
         for i in range(5):
             x, y = random.choice(self.empty_spaces)
             val = random.randint(min_val, max_val)
-            treasure_tile1.value = val
-            self.board[x][y] = treasure_tile1
+
+            self.treasures[i] = Treasure.Treasure(val)
+            treasure_tile = Tile.Tile(self.treasures[i].description, self.treasures[i])
+
+            self.treasure_tile_amount += 1
+
+            self.board[x][y] = treasure_tile
             self.empty_spaces.remove((x, y))
 
     def add_player(self, name, x: int, y: int):
@@ -72,25 +80,25 @@ class Board:
         match direction.upper():
             case "U" | "UP":
                 if current_x == 0:
-                    raise ValueError("Player.py cannot go up.")
+                    raise ValueError("Player cannot go up.")
                 else:
                     new_x = current_x - 1
                     new_y = current_y
             case "D" | "DOWN":
                 if current_x == self.n - 1:
-                    raise ValueError("Player.py cannot go down.")
+                    raise ValueError("Player cannot go down.")
                 else:
                     new_x = current_x + 1
                     new_y = current_y
             case "L" | "LEFT":
                 if current_y == 0:
-                    raise ValueError("Player.py cannot go left.")
+                    raise ValueError("Player cannot go left.")
                 else:
                     new_y = current_y - 1
                     new_x = current_x
             case "R" | "RIGHT":
                 if current_y == self.n - 1:
-                    raise ValueError("Player.py cannot go right.")
+                    raise ValueError("Player cannot go right.")
                 else:
                     new_y = current_y + 1
                     new_x = current_x
@@ -101,5 +109,20 @@ class Board:
         if was_pos_updated:
             new_position = (current_player, (new_x, new_y))
             self.players[name] = new_position
+
+            if self.board[new_x][new_y].instance is not None:
+                current_tile: Tile = self.board[new_x][new_y].instance
+                treasure_value: int = current_tile.value
+                current_player.update_score(treasure_value)
+                self.treasure_tile_amount -= 1
+
+                if self.treasure_tile_amount == 0:
+                    print("\nGame Over")
+                    print("Final score: ")
+
+                    for i in self.players:
+                        (current_player, (x, y)) = self.players[i]
+                        print("Player " + str(current_player.name) + ": " + str(current_player.score))
+
             self.board[current_x][current_y] = self.default
             self.board[new_x][new_y] = self.player_tiles[current_player.name]
