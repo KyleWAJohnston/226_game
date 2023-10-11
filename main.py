@@ -44,6 +44,7 @@ while is_game_over is False:
 
     # Print the current player whose turn it is, and the available move options.
     print(f"Player: ", current_player_name, " Score: ", current_player.score)
+
     user_move = input("(U)p (L)eft (R)ight (D)own (Q)uit? ")
 
     # Takes the players move choice and updates the board.

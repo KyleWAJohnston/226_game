@@ -3,7 +3,7 @@ import Board
 
 class View:
 
-    def __init__(self, board: [[str]]):
+    def __init__(self, board):
         """
         Constructs the View object to display the board.
         :param board: [[str]] The Board to be displayed.

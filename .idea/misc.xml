@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.11 (226_game)" project-jdk-type="Python SDK" />
+  <component name="Black">
+    <option name="sdkUUID" value="d63b2ff8-935f-452e-bc10-5d5708d014b5" />
+  </component>
+  <component name="ProjectRootManager" version="2" project-jdk-name="Pipenv (226_game)" project-jdk-type="Python SDK" />
 </project>

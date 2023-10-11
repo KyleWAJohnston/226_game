@@ -14,8 +14,11 @@ class Board:
         :param t: Treasure The Treasure object used to populate the Tiles with treasure.
         :param n: int The size of the board will be n X n.
         """
+        self.min_val = min_val
+        self.max_val = max_val
         self.max_players = n
         self.players: Player = {}
+        self.t = t
         self.n = n
         self.player_count: int = 0
         self.treasure_tile_amount = 0
@@ -73,56 +76,62 @@ class Board:
 
         current_player, (current_x, current_y) = self.players[name]
 
-        new_x: int = 0
-        new_y: int = 0
-        was_pos_updated: bool = True
+        while True:
+            new_x: int = 0
+            new_y: int = 0
+            was_pos_updated: bool = True
 
-        match direction.upper():
-            case "U" | "UP":
-                if current_x == 0:
-                    raise ValueError("Player cannot go up.")
-                else:
+            match direction.upper():
+                case "U" | "UP":
+                    # if current_x == 0:
+                    #     raise ValueError("Player cannot go up.")
+                    # else:
                     new_x = current_x - 1
                     new_y = current_y
-            case "D" | "DOWN":
-                if current_x == self.n - 1:
-                    raise ValueError("Player cannot go down.")
-                else:
+                case "D" | "DOWN":
+                    # if current_x == self.n - 1:
+                    #     raise ValueError("Player cannot go down.")
+                    # else:
                     new_x = current_x + 1
                     new_y = current_y
-            case "L" | "LEFT":
-                if current_y == 0:
-                    raise ValueError("Player cannot go left.")
-                else:
+                case "L" | "LEFT":
+                    # if current_y == 0:
+                    #     raise ValueError("Player cannot go left.")
+                    # else:
                     new_y = current_y - 1
                     new_x = current_x
-            case "R" | "RIGHT":
-                if current_y == self.n - 1:
-                    raise ValueError("Player cannot go right.")
-                else:
+                case "R" | "RIGHT":
+                    # if current_y == self.n - 1:
+                    #     raise ValueError("Player cannot go right.")
+                    # else:
                     new_y = current_y + 1
                     new_x = current_x
-            case other:
-                raise ValueError("Invalid input. Only enter either U, L, R, D, or Q.")
-                was_pos_updated = False
+                case other:
+                    raise ValueError("Invalid input. Only enter either U, L, R, D, or Q.")
+                    was_pos_updated = False
 
-        if was_pos_updated:
-            new_position = (current_player, (new_x, new_y))
-            self.players[name] = new_position
+            if was_pos_updated:
+                new_position = (current_player, (new_x, new_y))
+                self.players[name] = new_position
 
-            if self.board[new_x][new_y].instance is not None:
-                current_tile: Tile = self.board[new_x][new_y].instance
-                treasure_value: int = current_tile.value
-                current_player.update_score(treasure_value)
-                self.treasure_tile_amount -= 1
+                if self.board[new_x][new_y].player is not None or new_x > self.n - 1 or new_x < 0 or new_y > self.n - 1 or new_y < 0:
+                    print("Already a player there or at the edge of the board, try again.")
+                    direction = input("(U)p (L)eft (R)ight (D)own (Q)uit? ")
+                else:
+                    if self.board[new_x][new_y].instance is not None:
+                        current_tile: Tile = self.board[new_x][new_y].instance
+                        treasure_value: int = current_tile.value
+                        current_player.update_score(treasure_value)
+                        self.treasure_tile_amount -= 1
 
-                if self.treasure_tile_amount == 0:
-                    print("\nGame Over")
-                    print("Final score: ")
+                        if self.treasure_tile_amount == 0:
+                            print("\nGame Over")
+                            print("Final score: ")
 
-                    for i in self.players:
-                        (current_player, (x, y)) = self.players[i]
-                        print("Player " + str(current_player.name) + ": " + str(current_player.score))
+                            for i in self.players:
+                                (current_player, (x, y)) = self.players[i]
+                                print("Player " + str(current_player.name) + ": " + str(current_player.score))
 
-            self.board[current_x][current_y] = self.default
-            self.board[new_x][new_y] = self.player_tiles[current_player.name]
+                    self.board[current_x][current_y] = self.default
+                    self.board[new_x][new_y] = self.player_tiles[current_player.name]
+                    break
