@@ -106,6 +106,10 @@ class Board:
                     # else:
                     new_y = current_y + 1
                     new_x = current_x
+                case "Q" | "QUIT":
+                    print("Game closed.")
+                    was_pos_updated = False
+                    quit()
                 case other:
                     raise ValueError("Invalid input. Only enter either U, L, R, D, or Q.")
                     was_pos_updated = False

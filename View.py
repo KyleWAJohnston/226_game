@@ -27,4 +27,4 @@ class View:
                 else:
                     line += "?  "
 
-            print(line)
+        return line
