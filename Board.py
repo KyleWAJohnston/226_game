@@ -81,32 +81,20 @@ class Board:
             new_y: int = 0
             was_pos_updated: bool = True
 
-            match direction.upper():
-                case "U" | "UP":
-                    # if current_x == 0:
-                    #     raise ValueError("Player cannot go up.")
-                    # else:
+            match direction:
+                case "U":
                     new_x = current_x - 1
                     new_y = current_y
-                case "D" | "DOWN":
-                    # if current_x == self.n - 1:
-                    #     raise ValueError("Player cannot go down.")
-                    # else:
+                case "D":
                     new_x = current_x + 1
                     new_y = current_y
-                case "L" | "LEFT":
-                    # if current_y == 0:
-                    #     raise ValueError("Player cannot go left.")
-                    # else:
+                case "L":
                     new_y = current_y - 1
                     new_x = current_x
-                case "R" | "RIGHT":
-                    # if current_y == self.n - 1:
-                    #     raise ValueError("Player cannot go right.")
-                    # else:
+                case "R":
                     new_y = current_y + 1
                     new_x = current_x
-                case "Q" | "QUIT":
+                case "Q":
                     print("Game closed.")
                     was_pos_updated = False
                     quit()
@@ -118,9 +106,8 @@ class Board:
                 new_position = (current_player, (new_x, new_y))
                 self.players[name] = new_position
 
-                if self.board[new_x][new_y].player is not None or new_x > self.n - 1 or new_x < 0 or new_y > self.n - 1 or new_y < 0:
-                    print("Already a player there or at the edge of the board, try again.")
-                    direction = input("(U)p (L)eft (R)ight (D)own (Q)uit? ")
+                if (self.board[new_x][new_y].player is not None or new_x > self.n - 1 or new_x < 0 or new_y > self.n - 1 or new_y < 0):
+                    print("Already a player there or at the edge of the board.")
                 else:
                     if self.board[new_x][new_y].instance is not None:
                         current_tile: Tile = self.board[new_x][new_y].instance

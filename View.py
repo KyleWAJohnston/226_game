@@ -19,7 +19,7 @@ class View:
         line: str = ""
 
         for i in range(board_len):
-            line = ""
+            line += "\n"
 
             for j in range(board_len):
                 if self.board[i][j].description is not None:

@@ -7,7 +7,10 @@ class Player:
         :param name: The name of the player.
         """
         self.name = name
-        self.score = 0
+        self.score: int = 0
+
+    def get_score(self):
+        return self.score
 
     def update_score(self, value: int):
         self.score += value
