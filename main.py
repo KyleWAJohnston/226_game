@@ -1,5 +1,6 @@
+import asyncio
 from Game import Game
 
 
 g = Game()
-g.start()
+asyncio.run(g.start())
