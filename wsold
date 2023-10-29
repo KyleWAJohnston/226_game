@@ -4,17 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="059e8674-cbe7-4094-97d1-51cabee8c329" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Client.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Board.py" beforeDir="false" afterPath="$PROJECT_DIR$/OLD/Board.pyOLD" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Player.py" beforeDir="false" afterPath="$PROJECT_DIR$/OLD/Player.pyOLD" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tile.py" beforeDir="false" afterPath="$PROJECT_DIR$/OLD/Tile.pyOLD" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Treasure.py" beforeDir="false" afterPath="$PROJECT_DIR$/OLD/Treasure.pyOLD" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View.py" beforeDir="false" afterPath="$PROJECT_DIR$/OLD/View.pyOLD" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/OLD/main.pyOLD" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_game.py" beforeDir="false" afterPath="$PROJECT_DIR$/OLD/test_game.pyOLD" afterDir="false" />
-    </list>
+    <list default="true" id="059e8674-cbe7-4094-97d1-51cabee8c329" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -58,42 +48,36 @@
       <window_info id="Commit_Guest" />
       <window_info id="Pull Requests" weight="0.33019376" />
       <window_info id="Learn" weight="0.33019376" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12997848" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12942708" />
       <window_info id="Commit" order="1" weight="0.25" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Database Changes" />
       <window_info anchor="bottom" id="TypeScript" />
-      <window_info anchor="bottom" id="Python Packages" weight="0.3300926" />
+      <window_info anchor="bottom" id="Python Packages" />
       <window_info anchor="bottom" id="TODO" />
       <window_info anchor="bottom" id="File Transfer" />
       <window_info anchor="bottom" id="Python Console" weight="0.3300926" />
-      <window_info anchor="bottom" id="Run" weight="0.47141472" />
+      <window_info anchor="bottom" id="Run" weight="0.4550926" />
       <window_info anchor="bottom" id="Find" show_stripe_button="false" weight="0.3300926" />
       <window_info anchor="bottom" id="Version Control" order="0" />
       <window_info anchor="bottom" id="Problems" order="1" />
-      <window_info anchor="bottom" id="Problems View" order="2" weight="0.3300926" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.6282407" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="4" visible="true" weight="0.21805556" />
-      <window_info anchor="bottom" id="Services" order="5" weight="0.32994187" />
+      <window_info anchor="bottom" id="Problems View" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39098838" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="4" visible="true" weight="0.22819768" />
+      <window_info anchor="bottom" id="Services" order="5" />
       <window_info anchor="right" id="Endpoints" />
       <window_info anchor="right" id="documentation.v2" side_tool="true" />
       <window_info anchor="right" id="SciView" />
       <window_info anchor="right" id="Meet New UI" side_tool="true" />
-      <window_info anchor="right" id="Notifications" order="0" weight="0.14088541" />
+      <window_info anchor="right" content_ui="combo" id="Notifications" order="0" weight="0.25" />
       <window_info anchor="right" id="AIAssistant" order="1" weight="0.25" />
       <window_info anchor="right" id="Database" order="2" weight="0.25" />
       <window_info anchor="right" id="Gradle" order="3" weight="0.25" />
       <window_info anchor="right" id="Maven" order="4" weight="0.25" />
     </layout>
   </component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/" />
-      <recent name="$PROJECT_DIR$/OLD" />
-    </key>
-  </component>
-  <component name="RunManager">
-    <configuration name="main.pyOLD" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.main">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="226_game" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -106,7 +90,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/OLD/main.pyOLD" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -167,33 +151,12 @@
       <workItem from="1696801211012" duration="1914000" />
       <workItem from="1696901666152" duration="2293000" />
       <workItem from="1696968479083" duration="2632000" />
-      <workItem from="1696996370079" duration="8117000" />
-      <workItem from="1697237406121" duration="5806000" />
-      <workItem from="1697334322119" duration="2197000" />
-      <workItem from="1697596782420" duration="4697000" />
-      <workItem from="1697683149143" duration="7261000" />
-      <workItem from="1697755428474" duration="6213000" />
-      <workItem from="1697837471175" duration="6893000" />
-      <workItem from="1698095233672" duration="1812000" />
-      <workItem from="1698280888370" duration="5544000" />
-      <workItem from="1698445842414" duration="72000" />
-      <workItem from="1698446184675" duration="7857000" />
+      <workItem from="1696996370079" duration="3271000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/OLD/Board.pyOLD</url>
-          <line>108</line>
-          <option name="timeStamp" value="16" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/226_game$test_game.coverage" NAME="test_game Coverage Results" MODIFIED="1696801365672" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv" />

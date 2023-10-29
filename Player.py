@@ -1,16 +1,37 @@
-
 class Player:
-
-    def __init__(self, name):
+    def __init__(self, name: str):
         """
-        Creates a player object.
-        :param name: The name of the player.
+        Creates a new Player with the given name.
+
+        Player score is set to 0.
+        :param name: The name of the Player
         """
         self.name = name
-        self.score: int = 0
+        self.score = 0
 
-    def get_score(self):
+    def __str__(self):
+        return self.name
+
+    def get_name(self) -> int:
+        """
+        Returns the name.
+
+        :return: The name
+        """
+        return self.name
+
+    def get_score(self) -> int:
+        """
+        Returns the score.
+
+        :return: The score
+        """
         return self.score
 
-    def update_score(self, value: int):
+    def add_score(self, value: int) -> None:
+        """
+        Adds the given value to the Player's score.
+
+        :param value: The value to add.  Can be negative
+        """
         self.score += value
