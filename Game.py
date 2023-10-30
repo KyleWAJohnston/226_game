@@ -144,14 +144,12 @@ class Game:
                 # Open connection.
                 sc, _ = sock.accept()
 
-                # Transmits 0x00 0x01 indicating that the next transmission is 1 byte long.
-                # Then transmits the player ID, either 0x01 or 0x02.
-                sc.sendall(b'\x00\x01')
-
                 if self.playerCount == 0:
+                    sc.sendall(b'\x00')
                     sc.sendall(b'\x01')
                     self.playerCount += 1
                 elif self.playerCount == 1:
+                    sc.sendall(b'\x00')
                     sc.sendall(b'\x02')
                     self.playerCount += 1
                 else:

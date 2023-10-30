@@ -6,8 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="059e8674-cbe7-4094-97d1-51cabee8c329" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client.py" beforeDir="false" afterPath="$PROJECT_DIR$/Client.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game.py" beforeDir="false" afterPath="$PROJECT_DIR$/Game.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +86,7 @@
       <recent name="$PROJECT_DIR$/OLD" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.main.pyOLD">
     <configuration name="main.pyOLD" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="226_game" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -171,7 +171,8 @@
       <workItem from="1698095233672" duration="1812000" />
       <workItem from="1698280888370" duration="5544000" />
       <workItem from="1698445842414" duration="72000" />
-      <workItem from="1698446184675" duration="8801000" />
+      <workItem from="1698446184675" duration="8863000" />
+      <workItem from="1698615554657" duration="2783000" />
     </task>
     <servers />
   </component>
