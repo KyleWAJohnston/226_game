@@ -5,11 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="059e8674-cbe7-4094-97d1-51cabee8c329" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/constants.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client.py" beforeDir="false" afterPath="$PROJECT_DIR$/Client.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game.py" beforeDir="false" afterPath="$PROJECT_DIR$/Game.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +50,7 @@
       <window_info id="Commit_Guest" />
       <window_info id="Pull Requests" weight="0.33019376" />
       <window_info id="Learn" show_stripe_button="false" weight="0.33019376" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12890625" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12890205" />
       <window_info id="Commit" order="1" weight="0.25" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Database Changes" />
@@ -69,7 +65,7 @@
       <window_info anchor="bottom" id="Problems" order="1" />
       <window_info anchor="bottom" id="Problems View" order="2" weight="0.3300926" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.6282407" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="4" visible="true" weight="0.27180234" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="4" visible="true" weight="0.1912037" />
       <window_info anchor="bottom" id="Services" order="5" weight="0.32994187" />
       <window_info anchor="right" id="Endpoints" show_stripe_button="false" />
       <window_info anchor="right" id="documentation.v2" side_tool="true" />
@@ -180,7 +176,8 @@
       <workItem from="1698953771061" duration="80000" />
       <workItem from="1698969630718" duration="909000" />
       <workItem from="1699049742806" duration="6337000" />
-      <workItem from="1699056496767" duration="704000" />
+      <workItem from="1699056496767" duration="4632000" />
+      <workItem from="1699585968336" duration="1074000" />
     </task>
     <servers />
   </component>
