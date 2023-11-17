@@ -5,7 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="059e8674-cbe7-4094-97d1-51cabee8c329" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/website/game/templates/game/choose_player.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/website/game/templates/game/play_game.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/226_game.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/226_game.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/website/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/website/website/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/website/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/website/website/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,11 +34,12 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/student/.local/bin/pipenv&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/student/226_game/website/game/templates/game&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -50,7 +56,7 @@
       <window_info id="Commit_Guest" />
       <window_info id="Pull Requests" weight="0.33019376" />
       <window_info id="Learn" show_stripe_button="false" weight="0.33019376" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12890205" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12890625" />
       <window_info id="Commit" order="1" weight="0.25" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Database Changes" />
@@ -60,12 +66,12 @@
       <window_info anchor="bottom" id="File Transfer" />
       <window_info anchor="bottom" id="Python Console" weight="0.3300926" />
       <window_info anchor="bottom" id="Run" weight="0.47141472" />
-      <window_info anchor="bottom" id="Find" show_stripe_button="false" weight="0.3300926" />
-      <window_info anchor="bottom" id="Version Control" order="0" />
+      <window_info anchor="bottom" id="Find" weight="0.3298611" />
+      <window_info anchor="bottom" id="Version Control" order="0" weight="0.3300926" />
       <window_info anchor="bottom" id="Problems" order="1" />
-      <window_info anchor="bottom" id="Problems View" order="2" weight="0.3300926" />
+      <window_info anchor="bottom" id="Problems View" order="2" weight="0.3298611" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.6282407" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="4" visible="true" weight="0.1912037" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="4" visible="true" weight="0.3125" />
       <window_info anchor="bottom" id="Services" order="5" weight="0.32994187" />
       <window_info anchor="right" id="Endpoints" show_stripe_button="false" />
       <window_info anchor="right" id="documentation.v2" side_tool="true" />
@@ -79,6 +85,9 @@
     </layout>
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/website/game/templates/game" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/" />
       <recent name="$PROJECT_DIR$/OLD" />
@@ -178,6 +187,11 @@
       <workItem from="1699049742806" duration="6337000" />
       <workItem from="1699056496767" duration="4632000" />
       <workItem from="1699585968336" duration="1074000" />
+      <workItem from="1699745715214" duration="6717000" />
+      <workItem from="1699757697101" duration="4664000" />
+      <workItem from="1699840989485" duration="3391000" />
+      <workItem from="1699913282598" duration="21360000" />
+      <workItem from="1700260091261" duration="103000" />
     </task>
     <servers />
   </component>

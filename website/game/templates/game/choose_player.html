@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Game Board</title>
+</head>
+<body>
+    <h1>Game Board</h1>
+    <table>
+        {% for row in grid %}
+        <tr>
+            {% for tile in row %}
+                <td>{{ tile.label }}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </table>
+
+    <h2>Choose Player</h2>
+    {% for player in player_tag %}
+        <a href="{% url 'play_game' player %}">Become player {{ player }}</a><br>
+    {% endfor %}
+</body>
+</html>

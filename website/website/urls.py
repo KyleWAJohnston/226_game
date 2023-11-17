@@ -16,7 +16,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from game import views
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('game/create', views.create_game, name='create_game'),
+    path('game/', views.choose_player, name='choose_player'),
+    path('game/display/<str:player_tag>/', views.play_game, name='play_game'),
+    path('game/move/<str:player_tag>/<str:direction>', views.move_player, name='move_player'),
 ]

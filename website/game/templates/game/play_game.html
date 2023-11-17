@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Game Board</title>
+</head>
+<body>
+    <h1>Game Board</h1>
+    <table>
+        {% for row in grid %}
+        <tr>
+            {% for tile in row %}
+                <td>{{ tile.label }}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </table>
+
+    <br>
+    <div>
+        <p>Player 1: {{ player1_score }}</p>
+        <p>Player 2: {{  player2_score }}</p>
+    </div>
+
+    {% if player_tag == '1' or player_tag == '2' %}
+        <table>
+            <tr>
+                <td></td>
+                <td>
+                    <form action="{% url 'move_player' player_tag 'up' %}" method="post">
+                        {% csrf_token %}
+                        <button type="submit">Up</button>
+                    </form>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <form action="{% url 'move_player' player_tag 'left' %}" method="post">
+                        {% csrf_token %}
+                        <button type="submit">Left</button>
+                    </form>
+                </td>
+                <td>
+                    <form action="{% url 'move_player' player_tag 'down' %}" method="post">
+                        {% csrf_token %}
+                        <button type="submit">Down</button>
+                    </form>
+                </td>
+                <td>
+                    <form action="{% url 'move_player' player_tag 'right' %}" method="post">
+                        {% csrf_token %}
+                        <button type="submit">Right</button>
+                    </form>
+                </td>
+            </tr>
+    {% endif %}
+</body>
+</html>
