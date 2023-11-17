@@ -83,10 +83,11 @@ def move_player(request, player_tag, direction):
             player.score += new_tile.value
 
             current_tile.label = '.'
+            current_tile.value = 0
             current_tile.save()
 
             new_tile.label = str(player_tag)
-            new_tile.value = 0
+            new_tile.value = -1
             new_tile.save()
 
             player.row = new_row
