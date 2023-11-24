@@ -75,7 +75,7 @@ class BoardTestsCase(TestCase):
         player2.save()
 
         # Move the player to the left.
-        player2.col = 0
+        player1.col = 0
         player1.row = 9
         player1.save()
 
@@ -96,7 +96,7 @@ class BoardTestsCase(TestCase):
         player2.save()
 
         # Move the player to the right.
-        player2.col = 9
+        player1.col = 9
         player1.row = 9
         player1.save()
 
