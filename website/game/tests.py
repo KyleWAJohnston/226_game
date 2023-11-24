@@ -25,11 +25,16 @@ class BoardTestsCase(TestCase):
 
     def test_bottom_border(self):
         player1 = Player.objects.get(tag=1)
+        player2 = Player.objects.get(tag=2)
+
+        # Move player 2 out of the way.
+        player2.col = 0
+        player2.save()
 
         # Move the player to the bottom.
-        while player1.row < 9:
-            self.client.post(reverse('move_player', args=(player1.tag, 'down')))
-            player1.refresh_from_db()
+        player2.col = 9
+        player1.row = 9
+        player1.save()
 
         # After player is at the bottom, move the player down again. Position should not change.
         self.client.post(reverse('move_player', args=(player1.tag, 'down')))
@@ -37,3 +42,63 @@ class BoardTestsCase(TestCase):
 
         # Assert that the player is at, not beyond, the bottom border.
         self.assertEqual(player1.row, 9)
+
+    def test_top_border(self):
+        player1 = Player.objects.get(tag=1)
+        player2 = Player.objects.get(tag=2)
+
+        # Move player 2 out of the way.
+        player2.col = 0
+        player2.save()
+
+        # Move the player to the bottom.
+        player2.col = 9
+        player1.row = 9
+        player1.save()
+
+        # After player is at the top, move the player up again. Position should not change.
+        self.client.post(reverse('move_player', args=(player1.tag, 'up')))
+        player1.refresh_from_db()
+
+        # Assert that the player is at, not beyond, the top border.
+        self.assertEqual(player1.row, 0)
+
+    def test_left_border(self):
+        player1 = Player.objects.get(tag=1)
+        player2 = Player.objects.get(tag=2)
+
+        # Move player 2 out of the way.
+        player2.row = 0
+        player2.save()
+
+        # Move the player to the left.
+        player2.col = 0
+        player1.row = 9
+        player1.save()
+
+        # After player is at the left, move the player left again. Position should not change.
+        self.client.post(reverse('move_player', args=(player1.tag, 'left')))
+        player1.refresh_from_db()
+
+        # Assert that the player is at, not beyond, the left border.
+        self.assertEqual(player1.col, 0)
+
+    def test_left_border(self):
+        player1 = Player.objects.get(tag=1)
+        player2 = Player.objects.get(tag=2)
+
+        # Move player 2 out of the way.
+        player2.row = 0
+        player2.save()
+
+        # Move the player to the left.
+        player2.col = 0
+        player1.row = 9
+        player1.save()
+
+        # After player is at the right, move the player left again. Position should not change.
+        self.client.post(reverse('move_player', args=(player1.tag, 'left')))
+        player1.refresh_from_db()
+
+        # Assert that the player is at, not beyond, the left border.
+        self.assertEqual(player1.row, 0)
