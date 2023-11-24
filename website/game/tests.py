@@ -105,7 +105,7 @@ class BoardTestsCase(TestCase):
         player1.refresh_from_db()
 
         # Assert that the player is at, not beyond, the right border.
-        self.assertEqual(player1.row, 0)
+        self.assertEqual(player1.row, 9)
 
     def test_treasure_pickup(self):
         player1 = Player.objects.get(tag=1)
@@ -134,24 +134,27 @@ class BoardTestsCase(TestCase):
     def test_player_collision(self):
         player1 = Player.objects.get(tag=1)
         player2 = Player.objects.get(tag=2)
-        top_right_tile = Board.objects.get(row=0, col=0)
+        top_right_tile = Board.objects.get(row=1, col=0)
 
         # Position the players next to each-other.
-        # player2.col = 0
-        # player2.row = 0
-        # player2.save()
-        # top_right_tile.value = -1
+        player2.col = 0
+        player2.row = 1
+        player2.save()
+        top_right_tile.value = -1
+        top_right_tile.save()
         player1.col = 0
-        player1.row = 1
+        player1.row = 0
         player1.save()
-        
-        while player2.col is not 0 and player2.row is not 0:
-            self.client.post(reverse('move_player', args=(player2.tag, "up")))
-            self.client.post(reverse('move_player', args=(player2.tag, "left")))
+
+        # while player2.col is not 0 and player2.row is not 0:
+        #     self.client.post(reverse('move_player', args=(player2.tag, "up")))
+        #     self.client.post(reverse('move_player', args=(player2.tag, "left")))
+
+        player2.save()
 
         # Attempt to move player 1 into player 2.
-        self.client.post(reverse('move_player', args=(player1.tag, "up")))
+        self.client.post(reverse('move_player', args=(player1.tag, "down")))
         player1.refresh_from_db()
 
         # Assert that player 1 was not able to move and is in the original position.
-        self.assertEqual(player1.row, 1)
+        self.assertEqual(player1.row, 0)
