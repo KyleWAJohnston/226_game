@@ -100,11 +100,11 @@ class BoardTestsCase(TestCase):
         player1.row = 9
         player1.save()
 
-        # After player is at the left, move the player left again. Position should not change.
-        self.client.post(reverse('move_player', args=(player1.tag, 'left')))
+        # After player is at the right, move the player right again. Position should not change.
+        self.client.post(reverse('move_player', args=(player1.tag, 'right')))
         player1.refresh_from_db()
 
-        # Assert that the player is at, not beyond, the left border.
+        # Assert that the player is at, not beyond, the right border.
         self.assertEqual(player1.row, 0)
 
     def test_treasure_pickup(self):
@@ -134,11 +134,17 @@ class BoardTestsCase(TestCase):
     def test_player_collision(self):
         player1 = Player.objects.get(tag=1)
         player2 = Player.objects.get(tag=2)
+        top_right_tile = Board.objects.get(row=0, col=0)
 
         # Position the players next to each-other.
-        player2.col = 0
-        player2.row = 0
-        player2.save()
+        # player2.col = 0
+        # player2.row = 0
+        # player2.save()
+        # top_right_tile.value = -1
+        while player2.col is not 0 and player2.row is not 0:
+            self.client.post(reverse('move_player', args=(player2.tag, "up")))
+            self.client.post(reverse('move_player', args=(player2.tag, "left")))
+
         player1.col = 0
         player1.row = 1
         player1.save()
