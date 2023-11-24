@@ -141,13 +141,13 @@ class BoardTestsCase(TestCase):
         # player2.row = 0
         # player2.save()
         # top_right_tile.value = -1
-        while player2.col is not 0 and player2.row is not 0:
-            self.client.post(reverse('move_player', args=(player2.tag, "up")))
-            self.client.post(reverse('move_player', args=(player2.tag, "left")))
-
         player1.col = 0
         player1.row = 1
         player1.save()
+        
+        while player2.col is not 0 and player2.row is not 0:
+            self.client.post(reverse('move_player', args=(player2.tag, "up")))
+            self.client.post(reverse('move_player', args=(player2.tag, "left")))
 
         # Attempt to move player 1 into player 2.
         self.client.post(reverse('move_player', args=(player1.tag, "up")))
